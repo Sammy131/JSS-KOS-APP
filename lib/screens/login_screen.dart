@@ -2,7 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:jsskos_app/screens/home_screen.dart';
+import 'package:jsskos_app/screens/bottom_nav.dart';
 
 enum MobileVerficationState {
   SHOW_MOBILE_STATE_STATE,
@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final phoneController = TextEditingController();
   final otpController = TextEditingController();
 
-  FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   late String verificationId;
 
@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       if (AuthCredential?.user != null) {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => HomeScreen()));
+            context, MaterialPageRoute(builder: (context) => MyBottomNav()));
       }
     } on FirebaseAuthException catch (e) {
       setState(() {
