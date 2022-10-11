@@ -52,11 +52,15 @@ class _HomeScrrenState extends State<HomeScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      const Icon(
-                        Icons.subject,
-                        size: 50,
-                        color: Colors.white,
+
+                    //SUBJECT...
+                    children: <Widget>[
+                      Tab(
+                        icon: Image.asset(
+                          'assets/images/subj.png',
+                          height: 250,
+                          width: 250,
+                        ),
                       ),
                       const Text(
                         "Subject Selection",
@@ -80,11 +84,15 @@ class _HomeScrrenState extends State<HomeScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      const Icon(
-                        Icons.book,
-                        size: 50,
-                        color: Colors.white,
+
+                    //EXAM...
+                    children: <Widget>[
+                      Tab(
+                        icon: Image.asset(
+                          'assets/images/exam.png',
+                          height: 250,
+                          width: 250,
+                        ),
                       ),
                       const Text(
                         "Exam Registration",
@@ -108,11 +116,15 @@ class _HomeScrrenState extends State<HomeScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      const Icon(
-                        Icons.grade,
-                        size: 50,
-                        color: Colors.white,
+
+                    //GRADES...
+                    children: <Widget>[
+                      Tab(
+                        icon: Image.asset(
+                          'assets/images/grade.png',
+                          height: 250,
+                          width: 250,
+                        ),
                       ),
                       const Text(
                         "Grades Entry",
@@ -135,11 +147,15 @@ class _HomeScrrenState extends State<HomeScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      const Icon(
-                        Icons.money,
-                        size: 50,
-                        color: Colors.white,
+
+                    //FEES...
+                    children: <Widget>[
+                      Tab(
+                        icon: Image.asset(
+                          'assets/images/fees.png',
+                          height: 250,
+                          width: 250,
+                        ),
                       ),
                       const Text(
                         "Fees Payment",
@@ -162,11 +178,13 @@ class _HomeScrrenState extends State<HomeScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      const Icon(
-                        Icons.score,
-                        size: 50,
-                        color: Colors.white,
+                    children: <Widget>[
+                      Tab(
+                        icon: Image.asset(
+                          'assets/images/result.png',
+                          height: 250,
+                          width: 250,
+                        ),
                       ),
                       const Text(
                         "Exam Results",
@@ -189,11 +207,13 @@ class _HomeScrrenState extends State<HomeScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      const Icon(
-                        Icons.help,
-                        size: 50,
-                        color: Colors.white,
+                    children: <Widget>[
+                      Tab(
+                        icon: Image.asset(
+                          'assets/images/query.png',
+                          height: 250,
+                          width: 250,
+                        ),
                       ),
                       const Text(
                         "Query",
