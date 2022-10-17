@@ -31,193 +31,299 @@ class _HomeScrrenState extends State<HomeScreen> {
               height: 4.0,
             ),
           )),
-      backgroundColor: Color.fromARGB(255, 97, 242, 223),
+      backgroundColor: Color.fromARGB(248, 8, 38, 34),
       body: Container(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: EdgeInsets.only(left: 5, right: 5, bottom: 5),
           child: GridView(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 2,
+              mainAxisSpacing: 2,
+              //childAspectRatio: .60,
+            ),
             children: [
+              //SUBJECT SELECTION...
+
               InkWell(
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => SubSelec()));
                 },
                 child: Container(
+                  margin: new EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.red,
-                  ),
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.8),
+                          spreadRadius: 5,
+                          blurRadius: 2,
+                          offset: Offset(0, 5),
+                        )
+                      ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    // ignore: prefer_const_literals_to_create_immutables
-
-                    //SUBJECT...
-                    children: <Widget>[
-                      Tab(
-                        icon: Image.asset(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 85,
+                        width: 85,
+                        padding: const EdgeInsets.all(3.0),
+                        child: Image.asset(
                           'assets/images/subj.png',
-                          height: 250,
-                          width: 250,
+                          fit: BoxFit.cover,
                         ),
+                      ),
+                      const SizedBox(
+                        height: 5,
                       ),
                       const Text(
                         "Subject Selection",
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
                 ),
               ),
+
+              //EXAM...
+
               InkWell(
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => ExamReg()));
                 },
                 child: Container(
+                  margin: new EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Color.fromARGB(255, 35, 1, 59),
-                  ),
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.8),
+                          spreadRadius: 5,
+                          blurRadius: 3,
+                          offset: Offset(0, 5),
+                        )
+                      ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    // ignore: prefer_const_literals_to_create_immutables
-
-                    //EXAM...
-                    children: <Widget>[
-                      Tab(
-                        icon: Image.asset(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 85,
+                        width: 85,
+                        padding: const EdgeInsets.all(3.0),
+                        child: Image.asset(
                           'assets/images/exam.png',
-                          height: 250,
-                          width: 250,
+                          fit: BoxFit.cover,
                         ),
+                      ),
+                      const SizedBox(
+                        height: 5,
                       ),
                       const Text(
                         "Exam Registration",
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
                 ),
               ),
+
+              //GRADES ENTRY...
+
               InkWell(
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => GradeEntr()));
                 },
                 child: Container(
+                  margin: new EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Color.fromARGB(255, 49, 21, 233),
-                  ),
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.8),
+                          spreadRadius: 5,
+                          blurRadius: 3,
+                          offset: Offset(0, 5),
+                        )
+                      ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    // ignore: prefer_const_literals_to_create_immutables
-
-                    //GRADES...
-                    children: <Widget>[
-                      Tab(
-                        icon: Image.asset(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 85,
+                        width: 85,
+                        padding: const EdgeInsets.all(3.0),
+                        child: Image.asset(
                           'assets/images/grade.png',
-                          height: 250,
-                          width: 250,
+                          fit: BoxFit.cover,
                         ),
+                      ),
+                      const SizedBox(
+                        height: 5,
                       ),
                       const Text(
                         "Grades Entry",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
                 ),
               ),
+
+              //FEES PAYMENT...
               InkWell(
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => FeesPay()));
                 },
                 child: Container(
+                  margin: new EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.purple,
-                  ),
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.8),
+                          spreadRadius: 5,
+                          blurRadius: 3,
+                          offset: Offset(0, 5),
+                        )
+                      ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    // ignore: prefer_const_literals_to_create_immutables
-
-                    //FEES...
-                    children: <Widget>[
-                      Tab(
-                        icon: Image.asset(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 85,
+                        width: 85,
+                        padding: const EdgeInsets.all(3.0),
+                        child: Image.asset(
                           'assets/images/fees.png',
-                          height: 250,
-                          width: 250,
+                          fit: BoxFit.cover,
                         ),
+                      ),
+                      const SizedBox(
+                        height: 5,
                       ),
                       const Text(
                         "Fees Payment",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
                 ),
               ),
+
+              //RESULTS...
               InkWell(
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => ExamRes()));
                 },
                 child: Container(
+                  margin: new EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Color.fromARGB(255, 2, 83, 11),
-                  ),
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.8),
+                          spreadRadius: 5,
+                          blurRadius: 3,
+                          offset: Offset(0, 5),
+                        )
+                      ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: <Widget>[
-                      Tab(
-                        icon: Image.asset(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 85,
+                        width: 85,
+                        padding: const EdgeInsets.all(3.0),
+                        child: Image.asset(
                           'assets/images/result.png',
-                          height: 250,
-                          width: 250,
+                          fit: BoxFit.cover,
                         ),
+                      ),
+                      const SizedBox(
+                        height: 5,
                       ),
                       const Text(
                         "Exam Results",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
                 ),
               ),
+
+              //QUERY...
               InkWell(
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Query()));
                 },
                 child: Container(
+                  margin: new EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.pink,
-                  ),
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.8),
+                          spreadRadius: 5,
+                          blurRadius: 3,
+                          offset: Offset(0, 5),
+                        )
+                      ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: <Widget>[
-                      Tab(
-                        icon: Image.asset(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 85,
+                        width: 85,
+                        padding: const EdgeInsets.all(3.0),
+                        child: Image.asset(
                           'assets/images/query.png',
-                          height: 250,
-                          width: 250,
+                          fit: BoxFit.cover,
                         ),
+                      ),
+                      const SizedBox(
+                        height: 5,
                       ),
                       const Text(
                         "Query",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
                       )
                     ],
                   ),

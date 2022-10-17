@@ -10,9 +10,14 @@ class settings extends StatelessWidget {
         appBar: AppBar(
             backgroundColor: Color.fromARGB(255, 214, 84, 67),
             centerTitle: true,
-            title: const Text('SETTINGS!!')),
-        backgroundColor: Color.fromARGB(255, 97, 242, 223),
-        body: const Center(child: Text('settings...')));
+            title: Text('SETTINGS!!')),
+        //backgroundColor: Color.fromARGB(255, 97, 242, 223),
+        backgroundColor: Color.fromARGB(248, 8, 38, 34),
+        body: const Center(
+            child: Text(
+          'settings...',
+          style: TextStyle(fontSize: 20, color: Colors.white),
+        )));
     //floatingActionButton: FloatingActionButton(onPressed: () async {
     //await _auth.signOut()
   }

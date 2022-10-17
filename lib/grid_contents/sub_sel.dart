@@ -8,6 +8,6 @@ class SubSelec extends StatelessWidget {
           centerTitle: true,
           title: Text('SELECT YOUR SUBJECT!!'),
         ),
-        backgroundColor: Color.fromARGB(255, 97, 242, 223),
+        backgroundColor: Color.fromARGB(248, 8, 38, 34),
       );
 }
