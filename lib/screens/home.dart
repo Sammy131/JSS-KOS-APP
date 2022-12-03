@@ -1,14 +1,16 @@
-//GRID HOMEPAGE
-import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:jsskos_app/grid_contents/exam_reg.dart';
+import 'package:jsskos_app/grid_contents/ad_process.dart';
 import 'package:jsskos_app/grid_contents/exam_res.dart';
 import 'package:jsskos_app/grid_contents/fees_pay.dart';
 import 'package:jsskos_app/grid_contents/grade_entry.dart';
 import 'package:jsskos_app/grid_contents/query.dart';
-import 'package:jsskos_app/grid_contents/sub_sel.dart';
-import 'package:jsskos_app/screens/SideNav_bar.dart';
+import 'package:jsskos_app/grid_contents/ad_process.dart';
+import 'package:flutter/material.dart';
 
+//import 'package:first_app/screens/bottom_nav.dart';
+//import 'package:first_app/grid_contents/sub_sel.dart';
+
+//List<String> _contents = <String>['Home', 'Search', 'Notifications','Settings'];
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -17,40 +19,34 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScrrenState extends State<HomeScreen> {
-  final _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const SideNavBar(),
       appBar: AppBar(
           centerTitle: true,
-          title: const Text("JSSKOS APP"),
-          backgroundColor: Color.fromARGB(255, 214, 84, 67),
+          title: Text("JSSKOS APP"),
+          //backgroundColor: Color.fromARGB(255, 229, 76, 4),
+          backgroundColor: Color.fromARGB(248, 8, 38, 34),
           bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(4.0),
             child: Container(
               color: Colors.black,
               height: 4.0,
             ),
+            preferredSize: Size.fromHeight(4.0),
           )),
-      backgroundColor: Color.fromARGB(248, 8, 38, 34),
+      //backgroundColor: Color.fromARGB(248, 8, 38, 34),
+      backgroundColor: Color.fromARGB(255, 241, 71, 9),
       body: Container(
         child: Padding(
           padding: EdgeInsets.only(left: 5, right: 5, bottom: 5),
+          //const EdgeInsets.all(3.0),
           child: GridView(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 2,
-              mainAxisSpacing: 2,
-              //childAspectRatio: .60,
-            ),
             children: [
-              //SUBJECT SELECTION...
-
               InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SubSelec()));
+                      MaterialPageRoute(builder: (context) => AdProcess()));
                 },
                 child: Container(
                   margin: new EdgeInsets.all(15),
@@ -69,20 +65,30 @@ class _HomeScrrenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      /*Tab(
+                        icon: new Image.asset(
+                          'assets/images/subj.png',
+                          //height: 400,
+                          //width: 400,
+                          scale: 4,
+                        ),
+                      ),*/
+
+                      //Admission Process
                       Container(
                         height: 85,
                         width: 85,
                         padding: const EdgeInsets.all(3.0),
                         child: Image.asset(
-                          'assets/images/subj.png',
+                          'assets/images/ad.png',
                           fit: BoxFit.cover,
                         ),
                       ),
                       const SizedBox(
                         height: 5,
                       ),
-                      const Text(
-                        "Subject Selection",
+                      Text(
+                        "Admission",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: Colors.black,
@@ -93,9 +99,7 @@ class _HomeScrrenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-
-              //EXAM...
-
+              //EXAM
               InkWell(
                 onTap: () {
                   Navigator.push(context,
@@ -118,6 +122,18 @@ class _HomeScrrenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      /*Icon(
+                        Icons.book,
+                        size: 50,
+                        color: Colors.white,
+                      ),
+                      Tab(
+                        icon: new Image.asset(
+                          'assets/images/exam.png',
+                          height: 250,
+                          width: 250,
+                        ),
+                      ),*/
                       Container(
                         height: 85,
                         width: 85,
@@ -130,8 +146,8 @@ class _HomeScrrenState extends State<HomeScreen> {
                       const SizedBox(
                         height: 5,
                       ),
-                      const Text(
-                        "Exam Registration",
+                      Text(
+                        "Examination",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: Colors.black,
@@ -142,9 +158,7 @@ class _HomeScrrenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-
-              //GRADES ENTRY...
-
+              /*
               InkWell(
                 onTap: () {
                   Navigator.push(context,
@@ -167,6 +181,18 @@ class _HomeScrrenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      /*Icon(
+                        Icons.grade,
+                        size: 50,
+                        color: Colors.white,
+                      ),
+                      Tab(
+                        icon: new Image.asset(
+                          'assets/images/grade.png',
+                          height: 250,
+                          width: 250,
+                        ),
+                      ),*/
                       Container(
                         height: 85,
                         width: 85,
@@ -179,7 +205,7 @@ class _HomeScrrenState extends State<HomeScreen> {
                       const SizedBox(
                         height: 5,
                       ),
-                      const Text(
+                      Text(
                         "Grades Entry",
                         style: TextStyle(
                             color: Colors.black,
@@ -190,8 +216,6 @@ class _HomeScrrenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-
-              //FEES PAYMENT...
               InkWell(
                 onTap: () {
                   Navigator.push(context,
@@ -214,6 +238,18 @@ class _HomeScrrenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      /*Icon(
+                        Icons.money,
+                        size: 50,
+                        color: Colors.white,
+                      ),
+                      Tab(
+                        icon: new Image.asset(
+                          'assets/images/fees.png',
+                          height: 250,
+                          width: 250,
+                        ),
+                      ),*/
                       Container(
                         height: 85,
                         width: 85,
@@ -226,7 +262,7 @@ class _HomeScrrenState extends State<HomeScreen> {
                       const SizedBox(
                         height: 5,
                       ),
-                      const Text(
+                      Text(
                         "Fees Payment",
                         style: TextStyle(
                             color: Colors.black,
@@ -237,8 +273,6 @@ class _HomeScrrenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-
-              //RESULTS...
               InkWell(
                 onTap: () {
                   Navigator.push(context,
@@ -261,6 +295,18 @@ class _HomeScrrenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      /*Icon(
+                        Icons.grade,
+                        size: 50,
+                        color: Colors.white,
+                      ),
+                      Tab(
+                        icon: new Image.asset(
+                          'assets/images/result.png',
+                          height: 250,
+                          width: 250,
+                        ),
+                      ),*/
                       Container(
                         height: 85,
                         width: 85,
@@ -273,7 +319,7 @@ class _HomeScrrenState extends State<HomeScreen> {
                       const SizedBox(
                         height: 5,
                       ),
-                      const Text(
+                      Text(
                         "Exam Results",
                         style: TextStyle(
                             color: Colors.black,
@@ -284,8 +330,6 @@ class _HomeScrrenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-
-              //QUERY...
               InkWell(
                 onTap: () {
                   Navigator.push(context,
@@ -308,6 +352,18 @@ class _HomeScrrenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      /*Icon(
+                        Icons.help,
+                        size: 50,
+                        color: Colors.white,
+                      ),
+                      Tab(
+                        icon: new Image.asset(
+                          'assets/images/query.png',
+                          height: 250,
+                          width: 250,
+                        ),
+                      ),*/
                       Container(
                         height: 85,
                         width: 85,
@@ -320,7 +376,7 @@ class _HomeScrrenState extends State<HomeScreen> {
                       const SizedBox(
                         height: 5,
                       ),
-                      const Text(
+                      Text(
                         "Query",
                         style: TextStyle(
                             color: Colors.black,
@@ -330,8 +386,14 @@ class _HomeScrrenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-              ),
+              ),*/
             ],
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 2,
+              mainAxisSpacing: 2,
+              //childAspectRatio: .60,
+            ),
           ),
         ),
       ),

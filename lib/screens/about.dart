@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
+//import 'package:first_app/screens/home.dart';
 
-// ignore: camel_case_types
-class settings extends StatelessWidget {
-  const settings({super.key});
-
+class about extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
             backgroundColor: Color.fromARGB(255, 214, 84, 67),
             centerTitle: true,
-            title: Text('SETTINGS!!')),
+            title: Text('ABOUT JSSKOS!!')),
         //backgroundColor: Color.fromARGB(255, 97, 242, 223),
         backgroundColor: Color.fromARGB(248, 8, 38, 34),
-        body: const Center(
+        body: Center(
             child: Text(
-          'settings...',
+          'info...',
           style: TextStyle(fontSize: 20, color: Colors.white),
         )));
     //floatingActionButton: FloatingActionButton(onPressed: () async {
