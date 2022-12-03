@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:first_app/screens/notifcation.dart';
+import 'package:jsskos_app/screens/notifcation.dart';
 //import 'package:first_app/screens/search.dart';
-import 'package:first_app/screens/about.dart';
-import 'package:first_app/screens/home.dart';
+import 'package:jsskos_app/screens/about.dart';
+import 'package:jsskos_app/screens/home.dart';
 
 /*class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
