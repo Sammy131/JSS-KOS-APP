@@ -1,10 +1,10 @@
-import 'package:first_app/grid_contents/exam_reg.dart';
-import 'package:first_app/grid_contents/ad_process.dart';
-import 'package:first_app/grid_contents/exam_res.dart';
-import 'package:first_app/grid_contents/fees_pay.dart';
-import 'package:first_app/grid_contents/grade_entry.dart';
-import 'package:first_app/grid_contents/query.dart';
-import 'package:first_app/grid_contents/ad_process.dart';
+import 'package:jsskos_app/grid_contents/exam_reg.dart';
+import 'package:jsskos_app/grid_contents/ad_process.dart';
+import 'package:jsskos_app/grid_contents/exam_res.dart';
+import 'package:jsskos_app/grid_contents/fees_pay.dart';
+import 'package:jsskos_app/grid_contents/grade_entry.dart';
+import 'package:jsskos_app/grid_contents/query.dart';
+import 'package:jsskos_app/grid_contents/ad_process.dart';
 import 'package:flutter/material.dart';
 
 //import 'package:first_app/screens/bottom_nav.dart';
@@ -22,6 +22,7 @@ class _HomeScrrenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const SideNavBar(),
       appBar: AppBar(
           centerTitle: true,
           title: Text("JSSKOS APP"),
