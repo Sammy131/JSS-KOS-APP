@@ -62,7 +62,7 @@ class _ExamRegState extends State<ExamReg> {
         child: ListView.builder(
           //key: Key('builder ${selected.toString()}'),
           shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
+          //physics: const NeverScrollableScrollPhysics(),
           itemCount: itemData.length,
           itemBuilder: (context, index) {
             return Container(

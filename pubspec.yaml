@@ -70,6 +70,11 @@ flutter:
     - assets/images/fees.png
     - assets/images/result.png
     - assets/images/query.png
+    - assets/images/ad.png
+    - assets/images/fees struc.png
+    - assets/images/space.png
+    - assets/images/welcomtokos.png
+    - assets/images/Directors.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
