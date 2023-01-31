@@ -141,7 +141,7 @@ class _AdProcessState extends State<AdProcess> {
         child: ListView.builder(
           key: Key('builder ${selected.toString()}'),
           shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
+          //physics: const NeverScrollableScrollPhysics(),
           itemCount: itemData.length,
           itemBuilder: (context, index) {
             return Container(
