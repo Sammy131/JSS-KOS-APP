@@ -2,7 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:jsskos_app/screens/home_screen.dart';
+import 'package:jsskos_app/screens/bottom_nav.dart';
 
 enum MobileVerficationState {
   SHOW_MOBILE_STATE_STATE,
@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final phoneController = TextEditingController();
   final otpController = TextEditingController();
 
-  FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   late String verificationId;
 
@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       if (AuthCredential?.user != null) {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => HomeScreen()));
+            context, MaterialPageRoute(builder: (context) => MyBottomNav()));
       }
     } on FirebaseAuthException catch (e) {
       setState(() {
@@ -82,18 +82,23 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Container(
                   height: 100,
-                  margin: EdgeInsets.all(10.0),
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.white),
+                  width: 100,
+                  //margin: EdgeInsets.all(10.0),
+                  //decoration: BoxDecoration(
+                  //    shape: BoxShape.circle, color: Colors.white),
                   child: Center(
-                    child: Text(
+                      child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/logo.png'),
+                    backgroundColor: Colors.transparent,
+                  )
+                      /*Text(
                       'LOGO',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 35.0,
                           fontWeight: FontWeight.bold),
-                    ),
-                  ),
+                    ),*/
+                      ),
                 ),
                 SizedBox(
                   height: 10,
