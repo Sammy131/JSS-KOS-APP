@@ -8,7 +8,6 @@ class Query extends StatelessWidget {
           centerTitle: true,
           title: Text('ANY QUERIES IN YOUR MIND?'),
         ),
-        //backgroundColor: Color.fromARGB(255, 97, 242, 223),
         backgroundColor: Color.fromARGB(248, 8, 38, 34),
       );
 }

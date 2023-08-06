@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "754614116688",
-    "project_id": "jsskos-app",
-    "storage_bucket": "jsskos-app.appspot.com"
+    "project_number": "384742115066",
+    "project_id": "jss-kos-app",
+    "storage_bucket": "jss-kos-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:754614116688:android:93056fbeba260d75ca8c55",
+        "mobilesdk_app_id": "1:384742115066:android:fd02c5f99520d17e8b6b43",
         "android_client_info": {
           "package_name": "com.example.jsskos_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "754614116688-scknmv0rkc56io04ljmj8q2nqovqush8.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.jsskos_app",
-            "certificate_hash": "3a7ab21b46f420e29d6a974c31262095c2f22391"
-          }
-        },
-        {
-          "client_id": "754614116688-8cjrer6eieg4k6opbl16dko99idkmal1.apps.googleusercontent.com",
+          "client_id": "384742115066-ik48va9m0092snp401212s0rjjb2mtel.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBXYGqkvlf7jNSULU4Npa3n8ukVe1fFkQo"
+          "current_key": "AIzaSyAV4IuNwLzce3OFplWFea-deA315ZOWJgs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "754614116688-8cjrer6eieg4k6opbl16dko99idkmal1.apps.googleusercontent.com",
+              "client_id": "384742115066-ik48va9m0092snp401212s0rjjb2mtel.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

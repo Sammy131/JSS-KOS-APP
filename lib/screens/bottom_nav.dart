@@ -1,8 +1,91 @@
 import 'package:flutter/material.dart';
-import 'package:jsskos_app/screens/home.dart';
 import 'package:jsskos_app/screens/notifcation.dart';
-import 'package:jsskos_app/screens/search.dart';
-import 'package:jsskos_app/screens/settings.dart';
+//import 'package:first_app/screens/search.dart';
+import 'package:jsskos_app/screens/about.dart';
+import 'package:jsskos_app/screens/home.dart';
+
+/*class BottomNav extends StatefulWidget {
+  const BottomNav({super.key});
+
+  @override
+  State<BottomNav> createState() => _BottomNavState();
+}
+
+class _BottomNavState extends State<BottomNav> {
+  //final _auth = FirebaseAuth.instance;
+  int _currentIndex = 0;
+  void _onItemTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
+  //final tabs = [
+  //  Center(child: Text('Home')),
+  //  Center(child: Text('Search')),
+  //  Center(child: Text('Notifications')),
+  //  Center(child: Text('Settings')),
+  //];
+
+  //inal screens = [
+  // HomeScreen(),
+  // Search(),
+  // notifications(),
+  // settings(),
+  //];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(
+          child: Text('JSSKOS APP'),
+        ),
+        backgroundColor: Color.fromARGB(255, 214, 84, 67),
+      ), //appbar
+      //body: tabs[_currentIndex],
+      //body: BottomNavContents(
+      //  index: _currentIndex,
+      //),
+
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentIndex,
+          type: BottomNavigationBarType.fixed,
+          selectedFontSize: 20,
+          items: [
+            //home
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: 'Home',
+                backgroundColor: Colors.orange),
+            //search
+            BottomNavigationBarItem(
+                icon: Icon(Icons.search),
+                label: 'Search',
+                backgroundColor: Colors.orange),
+            //notification
+            BottomNavigationBarItem(
+                icon: Icon(Icons.notifications),
+                label: 'Notification',
+                backgroundColor: Colors.orange),
+            //settings
+            BottomNavigationBarItem(
+                icon: Icon(Icons.settings),
+                label: 'Settings',
+                backgroundColor: Colors.orange),
+          ],
+          onTap: (index) {
+            setState(() {
+              HomeScreen();
+              _currentIndex = index;
+            });
+          }),
+    );
+  }
+}
+*/
+
+//List<String> _contents = <String>['Home', 'Search', 'Notification', 'Settings'];
 
 class MyBottomNav extends StatefulWidget {
   @override
@@ -20,8 +103,6 @@ class MyBottomNavState extends State<MyBottomNav> {
     });
   }
 
-//CORE PART!!
-
   Widget _myBottomNavBar() {
     return BottomNavigationBar(
       currentIndex: _currentIndex,
@@ -30,30 +111,22 @@ class MyBottomNavState extends State<MyBottomNav> {
       type: BottomNavigationBarType.fixed,
 
       selectedFontSize: 20,
-      // ignore: prefer_const_literals_to_create_immutables
       items: [
-        //HOME
-        const BottomNavigationBarItem(
+        BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'home',
+            label: 'Home',
             backgroundColor: Colors.orange),
-
-        //SEARCH
-        const BottomNavigationBarItem(
+        /*BottomNavigationBarItem(
             icon: Icon(Icons.search),
             label: 'Search',
-            backgroundColor: Colors.orange),
-
-        //NOTOFICATION
-        const BottomNavigationBarItem(
+            backgroundColor: Colors.orange),*/
+        BottomNavigationBarItem(
             icon: Icon(Icons.notifications),
             label: 'Notification',
             backgroundColor: Colors.orange),
-
-        //SETTINGS
-        const BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+        BottomNavigationBarItem(
+            icon: Icon(Icons.info_rounded),
+            label: 'About',
             backgroundColor: Colors.orange),
       ],
     );
@@ -94,12 +167,12 @@ class BottomNavContents extends StatelessWidget {
     switch (index) {
       case 0:
         return HomeScreen();
+      /*case 1:
+        return Search();*/
       case 1:
-        return Search();
-      case 2:
         return notifications();
-      case 3:
-        return settings();
+      case 2:
+        return about();
       default:
         return Container();
     }

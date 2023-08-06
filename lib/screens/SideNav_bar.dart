@@ -91,7 +91,7 @@ class SideNavBar extends StatelessWidget {
 
       case 4:
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const Videos()));
+            context, MaterialPageRoute(builder: (context) => Videos()));
         break;
 
       default:

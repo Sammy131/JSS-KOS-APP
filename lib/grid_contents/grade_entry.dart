@@ -8,7 +8,6 @@ class GradeEntr extends StatelessWidget {
           centerTitle: true,
           title: Text('REGISTER FOR YOUR UPCOMING EXAMS!!'),
         ),
-        //backgroundColor: Color.fromARGB(255, 97, 242, 223),
         backgroundColor: Color.fromARGB(248, 8, 38, 34),
       );
 }
